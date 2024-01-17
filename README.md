@@ -1,5 +1,5 @@
-# Tobeto 2a C# Project
-## Workshop1
+## Tobeto 2a C# Project
+### Workshop1
 
 This repository is a fork of the original [tobeto-2a-csharp](https://github.com/ahmet-cetinkaya-instruction/tobeto-2a-csharp) project.
 
