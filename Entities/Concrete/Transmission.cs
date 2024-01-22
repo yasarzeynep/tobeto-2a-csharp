@@ -15,4 +15,13 @@ public class Transmission : Entity<int>
     //{
     //    Name = name;
     //}
+    public Transmission(string name)
+    {
+        Name = name;
+         
+    }
+    public Transmission()
+    {
+        
+    }
 }

@@ -1,6 +1,13 @@
-var builder = WebApplication.CreateBuilder(args);
+using Business.DependcyResolvers;
+using Core.CrossCuttingConcerns.Exceptions;
 
+//var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
+
+//Add services
+
+builder.Services.AddBusinessServices();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -9,6 +16,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+app.UseGlobalExceptionHandling();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

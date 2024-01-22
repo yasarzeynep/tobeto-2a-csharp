@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract;
 
-public interface IFuelDal:IEntityRepository<Fuel, int >
+public interface ICarDal:IEntityRepository<Car, int>
 {
-    /*Dal:Data Access Layer;veritabanı işlemlerini gerçekleştiren katmanı temsil eder*/
 }

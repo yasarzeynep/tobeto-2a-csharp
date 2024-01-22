@@ -20,11 +20,11 @@ namespace Business.Abstract
         public Fuel Update(Fuel fuel);
         public void Delete(int id); // void:Döndürülecek bir sonuc yok
         */
-        AddFuelResponse Add(AddFuelRequest request);
-        GetListFuelResponse GetList(GetListFuelRequest request);
-        GetByIdFuelResponse GetById(GetByIdFuelRequest request);
-        UpdateFuelResponse Update(UpdateFuelRequest request);
-        DeleteFuelResponse Delete(DeleteFuelRequest request);
+        public AddFuelResponse Add(AddFuelRequest request);
+        public GetListFuelResponse GetList(GetListFuelRequest request);
+        public GetByIdFuelResponse GetById(GetByIdFuelRequest request);
+        public UpdateFuelResponse Update(UpdateFuelRequest request);
+        public DeleteFuelResponse Delete(DeleteFuelRequest request);
 
     }
 }
