@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Business.Requests.Model;
 
-public class GetModelRequests
+public class GetModelByIdRequests
 {
+    public int Id { get; set; }
+    public GetModelByIdRequests(int id)
+    {
+        Id = id;
+    }
 }

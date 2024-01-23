@@ -8,4 +8,9 @@ namespace Business.Requests.Model;
 
 public class GetListModelRequest
 {
+    public short? FilterByBrandId { get; set; } 
+    public int? FilterByFuelId { get; set; }
+    public int? FilterByTransmissionId { get; set; }
+
+
 }

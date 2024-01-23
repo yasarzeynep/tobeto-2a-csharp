@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business.Responses.Car;
-
-public class GetCarResponse
+namespace Business.Profiles.Maping.AutoMapper
 {
+    internal class TransmissionMapperProfiles
+    {
+    }
 }

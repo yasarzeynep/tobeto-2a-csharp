@@ -24,9 +24,9 @@ public class TransmissionBusinessRules
         return existingTransmission == null;
     }
 
-    public bool CheckIfTransmissionExistsForDelete(int transmissionId)
-    {
-        var existingTransmission = _transmissionDal.Get(transmissionId);
-        return existingTransmission != null;
-    }
+    //public bool CheckIfTransmissionExistsForDelete(int transmissionId)
+    //{
+    //    var existingTransmission = _transmissionDal.Get(transmissionId);
+    //    return existingTransmission != null;
+    //}
 }

@@ -8,6 +8,6 @@ namespace Business.Responses.Fuel;
 
 public class GetListFuelResponse
 {
-    public IList<GetFuelResponse> Feuls { get; set; } //= new List<GetByIdFuelResponse>();
+    public IList<GetFuelByIdResponse> Feuls { get; set; } //= new List<GetByIdFuelResponse>();
 
 }

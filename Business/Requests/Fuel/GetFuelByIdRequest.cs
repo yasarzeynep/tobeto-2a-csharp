@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business.Requests.Car;
-
-public class GetCarRequest
+namespace Business.Requests.Fuel
 {
+    public class GetFuelByIdRequest
+    {
+        public int Id { get; set; }
+    }
 }

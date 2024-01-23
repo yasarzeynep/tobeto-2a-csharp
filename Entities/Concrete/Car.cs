@@ -16,13 +16,25 @@ namespace Entities.Concrete
         public int Kilometer {  get; set; }
         public int ModelYear {  get; set; }
         public string Plate { get; set; }
+        public string Message { get; set; }
 
         //---
-        public Model  Model { get; set; }
-        public Color Color {  get; set; } //deneme
+        public Model?  Model { get; set; } = null;
+        public Color? Color {  get; set; } = null;//deneme
 
-        
-        public Car() { }
 
+        public Car() {
+        }
+
+        public Car(int colorId, int modelId, CarState carState, int kilometer, int modelYear, string plate, string message)
+        {
+            ColorId = colorId;
+            ModelId = modelId;
+            CarState = carState;
+            Kilometer = kilometer;
+            ModelYear = modelYear;
+            Plate = plate;
+            Message = message;
+        }
     }
 }

@@ -15,9 +15,10 @@ public class UpdateCarResponse
     public int Kilometer { get; set; }
     public int ModelYear { get; set; }
     public string Plate { get; set; }
+    public string Message { get; set; }
+    public DateTime UpdateAt { get; set; }
 
-
-    public UpdateCarResponse(int colorId, int modelId, CarState carState, int kilometer, int modelYear, string plate)
+    public UpdateCarResponse(int colorId, int modelId, CarState carState, int kilometer, int modelYear, string plate, string message, DateTime updateAt)
     {
         ColorId = colorId;
         ModelId = modelId;
@@ -25,5 +26,8 @@ public class UpdateCarResponse
         Kilometer = kilometer;
         ModelYear = modelYear;
         Plate = plate;
+        Message = message;
+        UpdateAt = updateAt;
     }
+
 }

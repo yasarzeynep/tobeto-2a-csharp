@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business.Responses.Model;
-
-public class GetResponse
+namespace Business.Profiles.Maping.AutoMapper
 {
+    internal class FuelMapperProfiles
+    {
+    }
 }

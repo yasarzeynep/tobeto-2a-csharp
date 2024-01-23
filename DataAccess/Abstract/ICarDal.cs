@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract;
 
-public interface ICarDal:IEntityRepository<Car, int>
+public interface ICarDal : IEntityRepository<Car, int>
 {
+    Car Get(int ıd);
 }

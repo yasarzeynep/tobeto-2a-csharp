@@ -10,10 +10,12 @@ namespace Business.Dtos.Model
     {
         public int Id { get; set; }
         public int BrandId { get; set; }
-        public string Name { get; set; }
-        //public short Year { get; set; }
+        public string BrandName { get; set; }
         public int FuelId { get; set; }
         public int TransmissionId { get; set; }
+        public string TransmissionName { get; set; }
+        public string Name { get; set; }
         public decimal DailyPrice { get; set; }
+        public short Year { get; set; }
     }
 }

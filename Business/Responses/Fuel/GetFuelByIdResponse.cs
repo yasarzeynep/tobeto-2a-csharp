@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Business.Responses.Fuel;
 
-public class GetFuelResponse
+public class GetFuelByIdResponse
 {
     public int Id { get; set; }
     public string Name { get; set; }  

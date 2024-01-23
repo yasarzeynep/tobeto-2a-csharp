@@ -11,17 +11,10 @@ namespace DataAccess.Concrete.InMemory
 {
     public class InMemoryFuelDal : InMemoryEntityRepositoryBase<Fuel, int>, IFuelDal
     {
-        //protected override int generateId()
-        //{
-        //    throw new NotImplementedException();
-        //    int nextId = _entities.Count == 0
-        //   ? 1
-        //   : _entities.Max(e => e.Id) + 1;
-        //    return nextId;
-        //}
-        protected override int generateId()
-        {
-            throw new NotImplementedException();
-        }
+         protected override int generateId()
+         {
+            int nextId = Entities.Count == 0 ? 1 : Entities.Max(e => e.Id) + 1;
+            return nextId;
+         }
     }
 }

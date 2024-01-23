@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Business.Requests.Car;
 
-public class DeleteCarRequest
+public class GetCarByIdRequest
 {
     public int Id { get; set; }
-    
-    public DeleteCarRequest(int ıd)
+
+    public GetCarByIdRequest(int ıd)
     {
         Id = ıd;
     }

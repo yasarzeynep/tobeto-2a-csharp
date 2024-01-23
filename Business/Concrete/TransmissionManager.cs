@@ -21,7 +21,6 @@ public class TransmissionManager : ITransmissionService
         _transmissionBusinessRules = transmissionBusinessRules;
         _mapper = mapper;
     }
-
     public AddTransmissionResponse Add(AddTransmissionRequest request)
     {
         _transmissionBusinessRules.CheckIfTransmissionNameExistsForAdd(request.Name);
@@ -36,15 +35,15 @@ public class TransmissionManager : ITransmissionService
     public GetListTransmissionResponse GetList(GetListTransmissionRequest request)
     {
         IList<Transmission> transmissionList = _transmissionDal.GetList();
-        IList<GetTransmissionResponse> responseList = _mapper.Map<IList<GetTransmissionResponse>>(transmissionList);
+        IList<GetTransmissionByIdResponse> responseList = _mapper.Map<IList<GetTransmissionByIdResponse>>(transmissionList);
 
         return new GetListTransmissionResponse { Transmissions = responseList };
     }
 
-    public GetTransmissionResponse Get(GetTransmissionRequest request)
+    public GetTransmissionByIdResponse Get(GetTransmissionRequest request)
     {
         Transmission transmission = _transmissionDal.Get(request.Id);
-        return _mapper.Map<GetTransmissionResponse>(transmission);
+        return _mapper.Map<GetTransmissionByIdResponse>(transmission);
     }
 
     public UpdateTransmissionResponse Update(UpdateTransmissionRequest request)
@@ -52,7 +51,7 @@ public class TransmissionManager : ITransmissionService
         var existingTransmission = _transmissionDal.Get(request.Id);
         if (existingTransmission == null)
         {
-            return null; 
+            return null;
         }
 
         _transmissionBusinessRules.CheckIfTransmissionNameExistsForUpdate(request.Id, request.Name);
@@ -68,7 +67,7 @@ public class TransmissionManager : ITransmissionService
         var transmissionToDelete = _transmissionDal.Get(request.Id);
         if (transmissionToDelete == null)
         {
-            return null; 
+            return null;
         }
 
         _transmissionDal.Delete(transmissionToDelete);

@@ -5,13 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business.Responses.Car
+namespace Business.Responses.Car;
+
+public class DeleteCarResponse
 {
-    public class DeleteCarResponse
+    public DeleteCarResponse(int ıd, string name, DateTime deletedAt, string message)
     {
-        public int Id { get; set; } 
-        public int ModelId { get; set; }
-       
+        Id = ıd;
+        Name = name;
+        DeletedAt = deletedAt;
+        Message = message;
     }
-   
+
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public DateTime DeletedAt { get; set; }
+    public string Message { get; set; }
+
 }
+

@@ -17,7 +17,7 @@
   <Class Name="Entities.Concrete.Model">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAAAAQAAQAAAAAAABAAgAAAAARgAA=</HashCode>
+      <HashCode>AAAAAAACBEAAAAAAAAAQAAQAAAAAAABAAgAAAAARgAA=</HashCode>
       <FileName>Concrete\Model.cs</FileName>
     </TypeIdentifier>
   </Class>

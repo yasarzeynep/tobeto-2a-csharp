@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business.Requests.Fuel
+namespace Business.Dtos.Transmissiom
 {
-    public class GetByIdFuelRequest
+    public class TransmissionListItemDto
     {
-        public int Id { get; set; }
     }
 }

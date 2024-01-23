@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Business.Requests.Transmission;
 
-public class GetByIdTransmissionRequest
+public class GetTransmissionByIdRequest
 {
     public int Id { get; set; }
 
-    public GetByIdTransmissionRequest(int id)
+    public GetTransmissionByIdRequest(int id)
     {
         Id = id;
     }

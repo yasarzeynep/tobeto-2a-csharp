@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Business.Dtos.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,4 +9,5 @@ namespace Business.Responses.Model;
 
 public class GetListModelResponse
 {
+    public ICollection<ModelListItemDto> Items { get; set; }
 }

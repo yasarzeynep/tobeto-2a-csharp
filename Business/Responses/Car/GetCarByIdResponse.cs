@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Business.Responses.Car;
 
-public class AddCarResponse
+public class GetCarByIdResponse
 {
     public int ColorId { get; set; }
     public int ModelId { get; set; }
@@ -15,8 +15,7 @@ public class AddCarResponse
     public int Kilometer { get; set; }
     public int ModelYear { get; set; }
     public string Plate { get; set; }
-    public DateTime CreatedAt { get; set; }
-    public AddCarResponse(int colorId, int modelId, CarState carState, int kilometer, int modelYear, string plate, DateTime createdAt)
+    public GetCarByIdResponse(int colorId, int modelId, CarState carState, int kilometer, int modelYear, string plate)
     {
         ColorId = colorId;
         ModelId = modelId;
@@ -24,6 +23,5 @@ public class AddCarResponse
         Kilometer = kilometer;
         ModelYear = modelYear;
         Plate = plate;
-        CreatedAt = createdAt;
     }
 }

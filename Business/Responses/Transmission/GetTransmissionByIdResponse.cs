@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Business.Responses.Transmission;
 
-public class GetTransmissionResponse
+public class GetTransmissionByIdResponse
 {   public int Id { get; set; }
     public string Name { get; set; }
     public DateTime CreatedAt { get; set; }

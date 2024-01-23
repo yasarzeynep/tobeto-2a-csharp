@@ -9,22 +9,24 @@ namespace Business.Requests.Car;
 
 public class AddCarRequest
 {
-        public int ColorId { get; set; }
+    public int ColorId { get; set; }
         public int ModelId { get; set; }
         public CarState CarState { get; set; } // CarState tipi; --- ?? string or  bool
         public int Kilometer { get; set; }
         public int ModelYear { get; set; }
         public string Plate { get; set; }
+        public DateTime CreatedeAt { get; set; }
 
-
-        public AddCarRequest(int colorId, int modelId, CarState carState, int kilometer, int modelYear, string plate)
-        {
-            ColorId = colorId;
-            ModelId = modelId;
-            CarState = carState;
-            Kilometer = kilometer;
-            ModelYear = modelYear;
-            Plate = plate;
-        }
+    public AddCarRequest(int colorId, int modelId, CarState carState, int kilometer, int modelYear, string plate, DateTime createdeAt)
+    {
+        ColorId = colorId;
+        ModelId = modelId;
+        CarState = carState;
+        Kilometer = kilometer;
+        ModelYear = modelYear;
+        Plate = plate;
+        CreatedeAt = createdeAt;
     }
+
+}
 

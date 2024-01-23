@@ -6,10 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business.Abstract;
-
-public class IModelService
+namespace Business.Abstract
 {
-    //public AddModelResponse Add (AddModelRequest request);
-
+    public interface IModelService
+    {
+        public GetListModelResponse GetList(GetListModelRequest request);
+        public GetModelByIdResponse GetById(GetModelByIdRequests request);
+        public AddModelResponse Add(AddModelRequest request);
+        public UpdateModelResponse Update(UpdateModelRequest request);
+        public DeleteModelResponse Delete(DeleteModelRequest request);
+  
+    }
 }
