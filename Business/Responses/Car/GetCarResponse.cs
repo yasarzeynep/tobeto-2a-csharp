@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business.Requests.Car;
+namespace Business.Responses.Car;
 
-public class GetByIdCarRequest
+public class GetCarResponse
 {
 }

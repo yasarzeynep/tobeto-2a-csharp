@@ -36,20 +36,20 @@ public class TransmissionManager : ITransmissionService
     public GetListTransmissionResponse GetList(GetListTransmissionRequest request)
     {
         IList<Transmission> transmissionList = _transmissionDal.GetList();
-        IList<GetByIdTransmissionResponse> responseList = _mapper.Map<IList<GetByIdTransmissionResponse>>(transmissionList);
+        IList<GetTransmissionResponse> responseList = _mapper.Map<IList<GetTransmissionResponse>>(transmissionList);
 
         return new GetListTransmissionResponse { Transmissions = responseList };
     }
 
-    public GetByIdTransmissionResponse GetById(GetByIdTransmissionRequest request)
+    public GetTransmissionResponse Get(GetTransmissionRequest request)
     {
-        Transmission transmission = _transmissionDal.GetById(request.Id);
-        return _mapper.Map<GetByIdTransmissionResponse>(transmission);
+        Transmission transmission = _transmissionDal.Get(request.Id);
+        return _mapper.Map<GetTransmissionResponse>(transmission);
     }
 
     public UpdateTransmissionResponse Update(UpdateTransmissionRequest request)
     {
-        var existingTransmission = _transmissionDal.GetById(request.Id);
+        var existingTransmission = _transmissionDal.Get(request.Id);
         if (existingTransmission == null)
         {
             return null; 
@@ -65,7 +65,7 @@ public class TransmissionManager : ITransmissionService
 
     public DeleteTransmissionResponse Delete(DeleteTransmissionRequest request)
     {
-        var transmissionToDelete = _transmissionDal.GetById(request.Id);
+        var transmissionToDelete = _transmissionDal.Get(request.Id);
         if (transmissionToDelete == null)
         {
             return null; 

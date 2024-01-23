@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business.Responses.Model;
+namespace Business.Requests.Model;
 
-public class GetByIdResponse
+public class GetModelRequests
 {
 }

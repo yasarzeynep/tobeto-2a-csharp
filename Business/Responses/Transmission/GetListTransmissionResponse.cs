@@ -7,5 +7,5 @@ using System.Threading.Tasks;
 namespace Business.Responses.Transmission;
 public class GetListTransmissionResponse
 {
-    public IList<GetByIdTransmissionResponse> Transmissions { get; set; }
+    public IList<GetTransmissionResponse> Transmissions { get; set; }
 }

@@ -9,16 +9,11 @@ namespace Entities.Concrete;
 
 public class Transmission : Entity<int>
 {
-    //public int Id { get; set; }
     public string Name { get; set; }
-    //public Transmission(string name)
-    //{
-    //    Name = name;
-    //}
+  
     public Transmission(string name)
     {
-        Name = name;
-         
+        Name = name; 
     }
     public Transmission()
     {

@@ -20,7 +20,7 @@ public interface ITransmissionService
     */
     AddTransmissionResponse Add(AddTransmissionRequest request);
     GetListTransmissionResponse GetList(GetListTransmissionRequest request);
-    GetByIdTransmissionResponse GetById(GetByIdTransmissionRequest request);
+    GetTransmissionResponse Get(GetByIdTransmissionRequest request);
     UpdateTransmissionResponse Update(UpdateTransmissionRequest request);
     DeleteTransmissionResponse Delete(DeleteTransmissionRequest request);
 }

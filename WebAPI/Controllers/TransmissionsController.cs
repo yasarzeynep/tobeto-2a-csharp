@@ -32,7 +32,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("GetById")]
-        public ActionResult<GetByIdTransmissionResponse> GetTransmissionById([FromQuery] GetByIdTransmissionRequest request)
+        public ActionResult<GetTransmissionResponse> GetTransmissionById([FromQuery] GetByIdTransmissionRequest request)
         {
             var response = _transmissionService.GetById(request);
             if (response == null)

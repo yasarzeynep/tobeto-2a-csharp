@@ -6,34 +6,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Concrete.EntityFramework
+namespace DataAccess.Concrete.EntityFramework;
+
+public class EfFuelDal : IFuelDal
 {
-    internal class EfFuelDal : IFuelDal
+    public Fuel Add(Fuel entity)
     {
-        /*Ef: Entity Framework icin gerekli  veritabanı ıslemleri*/
-        public void Add(Fuel entity)
-        {
-            throw new NotImplementedException();
-        }
+        throw new NotImplementedException();
+    }
 
-        public void Delete(Fuel entity)
-        {
-            throw new NotImplementedException();
-        }
+    public Fuel Delete(Fuel entity)
+    {
+        throw new NotImplementedException();
+    }
 
-        public Fuel? GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
+    public Fuel? Get(Func<Fuel, bool> predicate)
+    {
+        throw new NotImplementedException();
+    }
 
-        public IList<Fuel> GetList()
-        {
-            throw new NotImplementedException();
-        }
+    public IList<Fuel> GetList(Func<Fuel, bool>? predicate = null)
+    {
+        throw new NotImplementedException();
+    }
 
-        public void Update(Fuel entity)
-        {
-            throw new NotImplementedException();
-        }
+    public Fuel Update(Fuel entity)
+    {
+        throw new NotImplementedException();
     }
 }

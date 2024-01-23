@@ -32,7 +32,7 @@ public ActionResult<GetListFuelResponse> GetFuels([FromQuery] GetListFuelRequest
 }
 
 [HttpGet("GetById")]
-public ActionResult<GetByIdFuelResponse> GetFuelById([FromQuery] GetByIdFuelRequest request)
+public ActionResult<GetFuelResponse> GetFuelById([FromQuery] GetByIdFuelRequest request)
 {
     var response = _fuelService.GetById(request);
     if (response == null)

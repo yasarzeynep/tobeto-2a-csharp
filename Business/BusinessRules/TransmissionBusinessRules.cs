@@ -26,7 +26,7 @@ public class TransmissionBusinessRules
 
     public bool CheckIfTransmissionExistsForDelete(int transmissionId)
     {
-        var existingTransmission = _transmissionDal.GetById(transmissionId);
+        var existingTransmission = _transmissionDal.Get(transmissionId);
         return existingTransmission != null;
     }
 }

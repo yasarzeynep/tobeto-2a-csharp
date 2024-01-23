@@ -22,7 +22,7 @@ namespace Business.Abstract
         */
         public AddFuelResponse Add(AddFuelRequest request);
         public GetListFuelResponse GetList(GetListFuelRequest request);
-        public GetByIdFuelResponse GetById(GetByIdFuelRequest request);
+        public GetFuelResponse Get(GetByIdFuelRequest request);
         public UpdateFuelResponse Update(UpdateFuelRequest request);
         public DeleteFuelResponse Delete(DeleteFuelRequest request);
 

@@ -41,7 +41,7 @@ public class FuelBusinessRules
     //Delete
     public void CheckIfFuelExistsForDelete(int fuelId)
     {
-        var existingFuel = _fuelDal.GetById(fuelId);
+        var existingFuel = _fuelDal.Get(fuelId);
 
         if (existingFuel == null) // varsa silme yapma
         {
@@ -49,7 +49,7 @@ public class FuelBusinessRules
         }
     }
     //GetById 
-    public void CheckIfIdIsValidForGetById(int fuelId)
+    public void CheckIfIdIsValidForGet(int fuelId)
     {
         if (fuelId <= 0)
         {
@@ -57,9 +57,9 @@ public class FuelBusinessRules
         }
     }
 
-    public void CheckIfFuelExistsForGetById(int fuelId)
+    public void CheckIfFuelExistsForGet(int fuelId)
     {
-        var existingFuel = _fuelDal.GetById(fuelId);
+        var existingFuel = _fuelDal.Get(fuelId);
 
         
         if (existingFuel == null)

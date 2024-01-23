@@ -9,7 +9,6 @@ namespace Entities.Concrete
 {
     public class Fuel: Entity<int>
     {
-       // public int Id { get; set; }
         public string Name { get; set; }
 
         public Fuel(string name)

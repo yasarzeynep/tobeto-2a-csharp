@@ -35,7 +35,7 @@ namespace Business.Concrete
 
             return _mapper.Map<AddFuelResponse>(fuelToAdd);
         }
-        public GetByIdFuelResponse GetById(GetByIdFuelRequest request)
+        public GetFuelResponse GetById(GetByIdFuelRequest request)
         {
             // GetById işlemi için iş kurallarını kontrol et
             _fuelBusinessRules.CheckIfIdIsValidForGetById(request.Id);
@@ -43,7 +43,7 @@ namespace Business.Concrete
 
             var fuel = _fuelDal.GetById(request.Id);
 
-            return _mapper.Map<GetByIdFuelResponse>(fuel);
+            return _mapper.Map<GetFuelResponse>(fuel);
         }
 
         public UpdateFuelResponse Update(UpdateFuelRequest request)
