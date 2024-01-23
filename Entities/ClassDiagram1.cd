@@ -17,7 +17,7 @@
   <Class Name="Entities.Concrete.Model">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAAAAQAAQAAAAAAABAAAAAAAARAAA=</HashCode>
+      <HashCode>AAAAAAAAAEAAAAAAAAAQAAQAAAAAAABAAgAAAAARgAA=</HashCode>
       <FileName>Concrete\Model.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -36,11 +36,16 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Entities.Concrete.Color">
-    <Position X="12.25" Y="0.5" Width="2.75" />
+    <Position X="13" Y="0.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
       <FileName>Concrete\Color.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Entities.Entity&lt;TId&gt;">
+    <Position X="15" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
