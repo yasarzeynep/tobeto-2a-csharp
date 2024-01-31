@@ -1,11 +1,4 @@
-﻿using Microsoft.AspNetCore.Routing.Constraints;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Business.Responses.Model;
+﻿namespace Business.Responses.Model;
 
 public class AddModelResponse
 {

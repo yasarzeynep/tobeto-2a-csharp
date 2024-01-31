@@ -7,12 +7,7 @@ using Business.Responses.Model;
 using Core.CrossCuttingConcerns.Validation.FluentValidation;
 using DataAccess.Abstract;
 using Entities.Concrete;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace Business.Concrete;

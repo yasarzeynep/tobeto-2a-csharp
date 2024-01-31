@@ -31,7 +31,7 @@
   <Class Name="Entities.Concrete.Car">
     <Position X="9.75" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAACAAAgAAAAAAAAAAAAIAAQAAAACAAAAgAgAgAAAA=</HashCode>
+      <HashCode>AAAACAAAgAAAAAAAAAAAAIAAQAAAACAAAAgAoAgAAAA=</HashCode>
       <FileName>Concrete\Car.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -42,10 +42,33 @@
       <FileName>Concrete\Color.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Core.Entities.Entity&lt;TId&gt;">
-    <Position X="15" Y="5.75" Width="1.5" />
-    <TypeIdentifier />
-    <Lollipop Position="0.2" />
+  <Class Name="Entities.Concrete.User">
+    <Position X="8" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAAAAAAAAAAAgAAAAAAAACAAAAAAAAAAg=</HashCode>
+      <FileName>Concrete\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entities.Concrete.CorporateCustomer">
+    <Position X="10.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABQAAAAAAAAEAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Concrete\CorporateCustomer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entities.Concrete.IndividualCustomer">
+    <Position X="12.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAEAAAAAAAAAAAgAAAAgAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Concrete\IndividualCustomer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entities.Concrete.Customer">
+    <Position X="15.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Concrete\Customer.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
