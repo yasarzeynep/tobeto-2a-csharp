@@ -1,4 +1,6 @@
-﻿namespace Business.Abstract;
+﻿using Business.Requests.CorporateCustomer;
+
+namespace Business.Abstract;
 
 public interface ICorporateCustomerService
 {
