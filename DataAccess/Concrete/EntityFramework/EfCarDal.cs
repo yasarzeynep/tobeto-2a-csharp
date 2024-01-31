@@ -15,7 +15,7 @@ public class EfCarDal : ICarDal
         throw new NotImplementedException();
     }
 
-    public Car Delete(Car entity)
+    public Car Delete(Car entity, bool isSoftDelete = true)
     {
         throw new NotImplementedException();
     }

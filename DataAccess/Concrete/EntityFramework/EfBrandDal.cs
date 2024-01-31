@@ -9,7 +9,7 @@ public class EfBrandDal : IBrandDal
         throw new NotImplementedException();
     }
 
-    public Brand Delete(Brand entity)
+    public Brand Delete(Brand entity, bool softDelete)
     {
         throw new NotImplementedException();
     }

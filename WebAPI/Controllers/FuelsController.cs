@@ -31,16 +31,16 @@ public ActionResult<GetListFuelResponse> GetFuels([FromQuery] GetListFuelRequest
     return Ok(response);
 }
 
-[HttpGet("GetById")]
-public ActionResult<GetFuelByIdResponse> GetFuelById([FromQuery] GetFuelByIdRequest request)
-{
-    var response = _fuelService.GetById(request);
-    if (response == null)
-    {
-        return NotFound();
-    }
-    return Ok(response);
-}
+//[HttpGet("GetById")]
+//public ActionResult<GetFuelByIdResponse> GetFuelById([FromQuery] GetFuelByIdRequest request)
+//{
+//    var response = _fuelService.GetById(request);
+//    if (response == null)
+//    {
+//        return NotFound();
+//    }
+//    return Ok(response);
+//}
 
 [HttpPut("Update")]
 public ActionResult<UpdateFuelResponse> UpdateFuel(UpdateFuelRequest request)

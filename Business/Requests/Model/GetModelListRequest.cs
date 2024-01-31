@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Business.Requests.Model;
 
-public class GetListModelRequest
+public class GetModelListRequest
 {
     public short? FilterByBrandId { get; set; } 
     public int? FilterByFuelId { get; set; }

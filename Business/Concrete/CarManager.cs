@@ -46,7 +46,7 @@ public class CarManager : ICarService
     public DeleteCarResponse Delete(DeleteCarRequest request)
     {
         // Data operations
-        Car deletedCar = _carDal.Get(request.Id);
+        Car deletedCar = _carDal.Get(predicate: car => car.Id == request.Id);
 
         // Silme işlemini gerçekleştir
         _carDal.Delete(deletedCar);
@@ -59,7 +59,7 @@ public class CarManager : ICarService
     }
         public GetCarByIdResponse GetById(GetCarByIdRequest request)
         {
-        var car = _carDal.Get(request.Id);
+        var car = _carDal.Get(predicate: car => car.Id == request.Id);
         var response = _mapper.Map<GetCarByIdResponse>(car);
         return response;
     }
@@ -73,30 +73,31 @@ public class CarManager : ICarService
         return new GetListCarResponse { Items = response };
     }
 
-        public UpdateCarResponse Update(UpdateCarRequest request)
-        {
+    public UpdateCarResponse Update(UpdateCarRequest request)
+    {
         // business rules
-          _carBusinessRules.ModelValidateCar(request);
+        _carBusinessRules.ModelValidateCar(request);
 
-            // Mapping
-            var carToUpdate = _mapper.Map<Car>(request);
+        // Mapping
+        var carToUpdate = _mapper.Map<Car>(request);
 
-            // Data operations
-            _carDal.Update(carToUpdate);
+        // Data operations
+        _carDal.Update(carToUpdate);
 
-            // Response
-            return new UpdateCarResponse
-            {
-                ColorId = carToUpdate.ColorId,
-                ModelId = carToUpdate.ModelId,
-                CarState = carToUpdate.CarState,
-                Kilometer = carToUpdate.Kilometer,
-                ModelYear = carToUpdate.ModelYear,
-                Plate = carToUpdate.Plate,
-                UpdateAt = DateTime.Now,
-                Message = "Car updated successfully."
-            };
+        // Response
+        return new UpdateCarResponse(
+            carToUpdate.ColorId,
+            carToUpdate.ModelId,
+            carToUpdate.CarState,
+            carToUpdate.Kilometer,
+            carToUpdate.ModelYear,
+            carToUpdate.Plate,
+            "Car updated successfully.",
+            DateTime.Now
+        );
     }
 
 }
+
+
 

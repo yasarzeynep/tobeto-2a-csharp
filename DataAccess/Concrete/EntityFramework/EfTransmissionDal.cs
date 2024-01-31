@@ -15,7 +15,7 @@ public class EfTransmissionDal : ITransmissionDal
         throw new NotImplementedException();
     }
 
-    public Transmission Delete(Transmission entity)
+    public Transmission Delete(Transmission entity, bool isSoftDelete = true)
     {
         throw new NotImplementedException();
     }

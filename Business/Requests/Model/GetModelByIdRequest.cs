@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Business.Requests.Model;
 
-public class GetModelByIdRequests
+public class GetModelByIdRequest
 {
     public int Id { get; set; }
-    public GetModelByIdRequests(int id)
+    public GetModelByIdRequest(int id)
     {
         Id = id;
     }

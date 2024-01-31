@@ -17,9 +17,9 @@ public class FuelBusinessRules
         _fuelDal = fuelDal;
     }
     //Add
-    public void CheckIfFuelExistsForAdd(string fuelName)
+    public void CheckIfFuelExistsForAdd(string name)
     {
-        var existingFuel = _fuelDal.GetList().FirstOrDefault(f => f.Name == fuelName);
+        var existingFuel = _fuelDal.GetList().FirstOrDefault(f => f.Name == name);
 
         if (existingFuel != null)
         {
@@ -38,16 +38,7 @@ public class FuelBusinessRules
         }
     }
 
-    //Delete
-    public void CheckIfFuelExistsForDelete(int fuelId)
-    {
-        var existingFuel = _fuelDal.Get(fuelId);
-
-        if (existingFuel == null) // varsa silme yapma
-        {
-            throw new Exception("Fuel not found for delete.");
-        }
-    }
+   
     //GetById 
     public void CheckIfIdIsValidForGet(int fuelId)
     {
@@ -57,16 +48,15 @@ public class FuelBusinessRules
         }
     }
 
-    public void CheckIfFuelExistsForGet(int fuelId)
-    {
-        var existingFuel = _fuelDal.Get(fuelId);
+    //public void CheckIfFuelExistsForGet(int fuelId)
+    //{
+    //    var existingFuel = _fuelDal.Get(fuelId);
 
-        
-        if (existingFuel == null)
-        {
-            throw new Exception("Fuel does not exist for Get By Id operation.");
-        }
-    }
+    //    if (existingFuel == null)
+    //    {
+    //        throw new Exception("Fuel does not exist for Get By Id operation.");
+    //    }
+    //}
 
     //GetList
     public void CheckIfFuelExistsForGetList()

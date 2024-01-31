@@ -28,15 +28,20 @@ public void CheckIfCarPlateExists (string plate)
 
     }
 
+    public void ModelValidateCar(UpdateCarRequest request)
+    {
+       
+        if (string.IsNullOrWhiteSpace(request.Plate))
+            throw new BusinessException("Plate cannot be empty.");
+
+        CheckIfCarPlateExists(request.Plate);
+    }
+
     public void ModelValidateCar(AddCarRequest request)
     {
         if (request.ModelYear < DateTime.Now.Year - 20)
             throw new BusinessException("Model year cannot be more than 20 years ago.");
         if (request.ModelYear > DateTime.Now.Year)
             throw new BusinessException("Model year cannot be in the future.");
-        if (string.IsNullOrWhiteSpace(request.Plate))
-            throw new BusinessException("Plate cannot be empty.");
-
-        CheckIfCarPlateExists(request.Plate);
     }
 }

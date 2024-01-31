@@ -21,6 +21,7 @@ public class TransmissionManager : ITransmissionService
         _transmissionBusinessRules = transmissionBusinessRules;
         _mapper = mapper;
     }
+
     public AddTransmissionResponse Add(AddTransmissionRequest request)
     {
         _transmissionBusinessRules.CheckIfTransmissionNameExistsForAdd(request.Name);
@@ -30,6 +31,30 @@ public class TransmissionManager : ITransmissionService
 
         AddTransmissionResponse response = _mapper.Map<AddTransmissionResponse>(transmissionToAdd);
         return response;
+
+    }
+
+    public DeleteTransmissionResponse Delete(DeleteTransmissionRequest request)
+    {
+        var transmissionToDelete = _transmissionDal.Get(predicate: transmission => transmission.Id == request.Id);
+        if (transmissionToDelete == null)
+        {
+            return null;
+        }
+
+        _transmissionDal.Delete(transmissionToDelete);
+
+        var response = _mapper.Map<DeleteTransmissionResponse>(transmissionToDelete);
+        return response;
+
+    }
+
+    public GetTransmissionByIdResponse GetById(GetTransmissionByIdRequest request)
+    {
+        Transmission transmission = _transmissionDal.Get(predicate: transmission => transmission.Id == request.Id);
+        var response = _mapper.Map<GetTransmissionByIdResponse>(transmission);
+        return response;
+
     }
 
     public GetListTransmissionResponse GetList(GetListTransmissionRequest request)
@@ -40,15 +65,10 @@ public class TransmissionManager : ITransmissionService
         return new GetListTransmissionResponse { Transmissions = responseList };
     }
 
-    public GetTransmissionByIdResponse Get(GetTransmissionRequest request)
-    {
-        Transmission transmission = _transmissionDal.Get(request.Id);
-        return _mapper.Map<GetTransmissionByIdResponse>(transmission);
-    }
 
     public UpdateTransmissionResponse Update(UpdateTransmissionRequest request)
     {
-        var existingTransmission = _transmissionDal.Get(request.Id);
+        var existingTransmission = _transmissionDal.Get(predicate: transmission => transmission.Id == request.Id);
         if (existingTransmission == null)
         {
             return null;
@@ -60,19 +80,7 @@ public class TransmissionManager : ITransmissionService
         _transmissionDal.Update(existingTransmission);
 
         return _mapper.Map<UpdateTransmissionResponse>(existingTransmission);
-    }
 
-    public DeleteTransmissionResponse Delete(DeleteTransmissionRequest request)
-    {
-        var transmissionToDelete = _transmissionDal.Get(request.Id);
-        if (transmissionToDelete == null)
-        {
-            return null;
-        }
-
-        _transmissionDal.Delete(transmissionToDelete);
-
-        return _mapper.Map<DeleteTransmissionResponse>(transmissionToDelete);
     }
 }
 

@@ -1,5 +1,6 @@
 ﻿using Core.CrossCuttingConcerns.Exceptions;
 using DataAccess.Abstract;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,5 +25,18 @@ public class ModelBusinessRules
         {
             throw new BusinessException("Model name already  exists.");
         }
+    }
+    public void CheckIfModelExists(Model? model)
+    {
+
+        if (model  is null)
+        {
+            throw new NotFoundException("Model not found.");
+        }
+    }
+    public void CheckIfModelYearShouldBeInLast20Years(short year)
+    {
+        if (year < DateTime.UtcNow.AddYears(-20).Year)
+            throw new BusinessException("Model year should be in last 20 years.");
     }
 }

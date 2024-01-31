@@ -15,7 +15,7 @@ public class EfFuelDal : IFuelDal
         throw new NotImplementedException();
     }
 
-    public Fuel Delete(Fuel entity)
+    public Fuel Delete(Fuel entity, bool isSoftDelete = true)
     {
         throw new NotImplementedException();
     }
