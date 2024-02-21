@@ -9,7 +9,12 @@ public class Customer: Entity<int>
     {
         UserId = userId;
     }
+
+    public Customer()
+    {
+    }
+
     public User? User { get; set; }= null;
-    public  IndividualCustomer? IndividualCustomer { get; set; } = null;
-    public CorporateCustomer? CorporateCustomer { get; set; }= null;
+    //public  IndividualCustomer? IndividualCustomer { get; set; } = null;
+    //public CorporateCustomer? CorporateCustomer { get; set; }= null;
 }

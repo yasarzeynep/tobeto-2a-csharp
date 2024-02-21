@@ -6,53 +6,43 @@ using Core.CrossCuttingConcerns.Validation.FluentValidation;
 using DataAccess.Abstract;
 using Entities.Concrete;
 
-namespace Business.Concrete
+namespace Business.Concrete;
+
+public class CorporateCustomerManager : ICorporateCustomerService
 {
-    public class CorporateCustomerManager : ICorporateCustomerService
+    private readonly ICorporateCustomerDal _corporateCustomerDal;
+    private readonly CorporateCustomerBusinessRules _corporateCustomerBusinessRules;
+    private readonly IMapper _mapper;
+
+    public CorporateCustomerManager(ICorporateCustomerDal corporateCustomerDal, CorporateCustomerBusinessRules corporateCustomerBusinessRules, IMapper mapper)
     {
-        private readonly ICorporateCustomerDal _corporateCustomerDal;
-        private readonly CorporateCustomerBusinessRules _corporateCustomerBusinessRules;
-        private readonly IMapper _mapper;
+        _corporateCustomerDal = corporateCustomerDal;
+        _corporateCustomerBusinessRules = corporateCustomerBusinessRules;
+        _mapper = mapper;
+    }
 
-        public CorporateCustomerManager(ICorporateCustomerDal corporateCustomerDal, CorporateCustomerBusinessRules corporateCustomerBusinessRules, IMapper mapper)
-        {
-            _corporateCustomerDal = corporateCustomerDal;
-            _corporateCustomerBusinessRules = corporateCustomerBusinessRules;
-            _mapper = mapper;
-        }
-        public AddCorporateCustomerResponse Add(AddCorporateCustomerRequest request)
-        {
-            ValidationTool.Validate(new AddCorporateCustomerRequestValidator(), request);
+    public AddCorporateCustomerResponse Add(AddCorporateCustomerRequest request)
+    {
+        throw new NotImplementedException();
+    }
 
-            _corporateCustomerBusinessRules.CheckIfCompanyNameExists(request.CompanyName);
+    public DeleteCorporateCustomerResponse Delete(DeleteCorporateCustomerRequest request)
+    {
+        throw new NotImplementedException();
+    }
 
-            var corporateCustomerToAdd = _mapper.Map<CorporateCustomer>(request);
+    public GetCorporateCustomerByIdResponse GetById(GetCorporateCustomerByIdRequest request)
+    {
+        throw new NotImplementedException();
+    }
 
-            CorporateCustomer addedCorporateCustomer = _corporateCustomerDal.Add(corporateCustomerToAdd);
+    public GetCorporateCustomerListResponse GetList(GetCorporateCustomerListRequest request)
+    {
+        throw new NotImplementedException();
+    }
 
-            var response = _mapper.Map<AddCorporateCustomerResponse>(addedCorporateCustomer);
-            return response;
-
-        }
-
-        public DeleteCorporateCustomerResponse Delete(DeleteCorporateCustomerRequest request)
-        {
-            throw new NotImplementedException();
-        }
-
-        public GetCorporateCustomerByIdResponse GetById(GetCorporateCustomerByIdRequest request)
-        {
-            throw new NotImplementedException();
-        }
-
-        public GetCorporateCustomerListResponse GetList(GetCorporateCustomerListRequest request)
-        {
-            throw new NotImplementedException();
-        }
-
-        public UpdateCorporateCustomerResponse Update(UpdateCorporateCustomerRequest request)
-        {
-            throw new NotImplementedException();
-        }
+    public UpdateCorporateCustomerResponse Update(UpdateCorporateCustomerRequest request)
+    {
+        throw new NotImplementedException();
     }
 }

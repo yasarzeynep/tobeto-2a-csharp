@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business.Profiles.Maping.AutoMapper
+namespace Business.Requests.Brand
 {
-    public class FuelMapperProfiles
+    public class GetBrandByIdRequest
     {
+        public int Id { get; set; }
     }
 }

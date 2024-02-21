@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Business.Abstract;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
@@ -7,5 +8,18 @@ namespace WebAPI.Controllers
     [ApiController]
     public class CarsController : ControllerBase
     {
+        private readonly ICarService _carService;
+
+        public CarsController(ICarService carService)
+        {
+            _carService = carService;
+        }
+        [HttpGet]
+
+        public GetCarListResponse GetList([FromQuery] GetCarListRequest request)
+        {
+            GetCarListResponse response = _carService.GetList(request);
+            return response;
+        }
     }
 }

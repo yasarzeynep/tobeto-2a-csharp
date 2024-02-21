@@ -20,37 +20,20 @@ public class IndividualCustomerManager : IIndividualCustomerService
         _individualCustomerBusinessRules = individualCustomerBusinessRules;
         _mapper = mapper;
     }
+
     public AddIndividualCustomerResponse Add(AddIndividualCustomerRequest request)
     {
-        ValidationTool.Validate(new AddIndividualCustomerRequestValidator(), request);
-
-        _individualCustomerBusinessRules.CheckIfFirstNameExists(request.FirstName);
-
-        var individualCustomerToAdd = _mapper.Map<IndividualCustomer>(request);
-
-        IndividualCustomer addedIndividualCustomer = _individualCustomerDal.Add(individualCustomerToAdd);
-
-        var response = _mapper.Map<AddIndividualCustomerResponse>(addedIndividualCustomer);
-        return response;
+        throw new NotImplementedException();
     }
 
     public DeleteIndividualCustomerResponse Delete(DeleteIndividualCustomerRequest request)
     {
-        IndividualCustomer? individualCustomerToDelete = _individualCustomerDal.Get(predicate: ic => ic.Id == request.Id);
-        _individualCustomerBusinessRules.CheckIfIndividualCustomerExists(individualCustomerToDelete);
-
-        IndividualCustomer deletedIndividualCustomer = _individualCustomerDal.Delete(individualCustomerToDelete!);
-
-        var response = _mapper.Map<DeleteIndividualCustomerResponse>(deletedIndividualCustomer);
-        return response;
+        throw new NotImplementedException();
     }
-        public GetIndividualCustomerByIdResponse GetById(GetIndividualCustomerByIdRequest request)
-    {
-         IndividualCustomer? individualCustomer = _individualCustomerDal.Get(predicate: ic => ic.Id == request.Id);
-        _individualCustomerBusinessRules.CheckIfIndividualCustomerExists(individualCustomer);
 
-        var response = _mapper.Map<GetIndividualCustomerByIdResponse>(individualCustomer);
-        return response;
+    public GetIndividualCustomerByIdResponse GetById(GetIndividualCustomerByIdRequest request)
+    {
+        throw new NotImplementedException();
     }
 
     public GetIndividualCustomerListResponse GetList(GetIndividualCustomerListRequest request)
@@ -60,13 +43,6 @@ public class IndividualCustomerManager : IIndividualCustomerService
 
     public UpdateIndividualCustomerResponse Update(UpdateIndividualCustomerRequest request)
     {
-        IndividualCustomer? individualCustomerToUpdate = _individualCustomerDal.Get(predicate: ic => ic.Id == request.Id);
-        _individualCustomerBusinessRules.CheckIfIndividualCustomerExists(individualCustomerToUpdate);
-
-        individualCustomerToUpdate = _mapper.Map(request, individualCustomerToUpdate);
-        IndividualCustomer updatedIndividualCustomer = _individualCustomerDal.Update(individualCustomerToUpdate!);
-
-        var response = _mapper.Map<UpdateIndividualCustomerResponse>(updatedIndividualCustomer);
-        return response;
+        throw new NotImplementedException();
     }
 }

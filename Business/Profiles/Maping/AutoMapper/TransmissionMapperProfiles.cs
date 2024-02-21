@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Business.Profiles.Maping.AutoMapper
 {
-    internal class TransmissionMapperProfiles
+    public class TransmissionMapperProfiles
     {
     }
 }

@@ -1,19 +1,24 @@
-﻿namespace Entities.Concrete;
+﻿using Core.Entities;
 
-public class CorporateCustomer
+namespace Entities.Concrete;
+
+public class CorporateCustomer : Entity<int>
 {
-  
-    public string CompanyName { get; set; }
-    public string TaxNo { get; set; }
-
-
-    public int UserId { get; set; }
-    public User? User { get; set; } = null;
-    public Customer? Customer { get; set; } = null;
-
     public CorporateCustomer(string companyName, string taxNo)
     {
         CompanyName = companyName;
         TaxNo = taxNo;
+        
     }
+
+    public CorporateCustomer()
+    {
+    }
+
+    public string CompanyName { get; set; }
+    public string TaxNo { get; set; }
+    public User? User { get; set; } = null;
+    public Customer? Customer { get; set; } = null;
+
+   
 }

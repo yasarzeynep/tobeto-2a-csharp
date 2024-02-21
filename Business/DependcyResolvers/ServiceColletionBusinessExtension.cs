@@ -33,6 +33,7 @@ public static class ServiceColletionBusinessExtension
             .AddScoped<IModelService, ModelManager>()
             .AddScoped<IModelDal, EfModelDal>()
             .AddScoped<ModelBusinessRules>(); // Fluent
+
         services.AddAutoMapper(Assembly.GetExecutingAssembly()); // AutoMapper.Extensions.Microsoft.DependencyInjection NuGet Paketi
                                                                  // Reflection yöntemiyle Profile class'ını kalıtım alan tüm class'ları bulur ve AutoMapper'a ekler.
 
@@ -60,6 +61,20 @@ public static class ServiceColletionBusinessExtension
             .AddScoped<ICustomerService, CustomerManager>()
             .AddScoped<ICustomerDal, EfCustomerDal>()
             .AddScoped<CustomerBusinessRules>();
+
+        services
+               .AddScoped<ICorporateCustomerService, CorporateCustomerManager>()
+               .AddScoped<ICorporateCustomerDal, EfCorporateCustomerDal>()
+               .AddScoped<CorporateCustomerBusinessRules>();
+
+        services
+              .AddScoped<IIndividualCustomerService, IndividualCustomerManager>()
+              .AddScoped<IIndividualCustomerDal, EfIndividualCustomerDal>()
+              .AddScoped<IndividualCustomerBusinessRules>();
+
+        services
+            .AddScoped<IUserService, UserManager>()
+            .AddScoped<IUserDal, EfUserDal>();
 
         services.AddDbContext<RentACarContext>(
             options => options.UseSqlServer(configuration.GetConnectionString("RentACarMSSQL22")));

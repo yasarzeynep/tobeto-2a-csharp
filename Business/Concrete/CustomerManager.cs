@@ -25,38 +25,19 @@ public class CustomerManager : ICustomerService
 
     public AddCustomerResponse Add(AddCustomerRequest request)
     {
-        ValidationTool.Validate(new AddCustomerRequestValidator(), request);
-
-        _customerBusinessRules.CheckIfCustomerNameExists(request.Name);
-
-        var customerToAdd = _mapper.Map<Customer>(request);
-
-        Customer addedCustomer = _customerDal.Add(customerToAdd);
-
-        var response = _mapper.Map<AddCustomerResponse>(addedCustomer);
-        return response;
+        throw new NotImplementedException();
     }
 
     public DeleteCustomerResponse Delete(DeleteCustomerRequest request)
     {
-        Customer? customerToDelete = _customerDal.Get(predicate: customer => customer.Id == request.Id);
-        _customerBusinessRules.CheckIfCustomerExists(customerToDelete);
-
-        Customer deletedCustomer = _customerDal.Delete(customerToDelete!);
-
-        var response = _mapper.Map<DeleteCustomerResponse>(deletedCustomer);
-        return response;
+        throw new NotImplementedException();
     }
 
     public GetCustomerByIdResponse GetById(GetCustomerByIdRequest request)
     {
-        Customer? customer = _customerDal.Get(predicate: customer => customer.Id == request.Id);
-        _customerBusinessRules.CheckIfCustomerExists(customer);
-
-        var response = _mapper.Map<GetCustomerByIdResponse>(customer);
-        return response;
-
+        throw new NotImplementedException();
     }
+
     public GetCustomerListResponse GetList(GetCustomerListRequest request)
     {
         throw new NotImplementedException();
@@ -64,13 +45,6 @@ public class CustomerManager : ICustomerService
 
     public UpdateCustomerResponse Update(UpdateCustomerRequest request)
     {
-        Customer? customerToUpdate = _customerDal.Get(predicate: customer => customer.Id == request.Id);
-        _customerBusinessRules.CheckIfCustomerExists(customerToUpdate);
-
-        customerToUpdate = _mapper.Map(request, customerToUpdate);
-        Customer updatedCustomer = _customerDal.Update(customerToUpdate!);
-
-        var response = _mapper.Map<UpdateCustomerResponse>(updatedCustomer);
-        return response;
+        throw new NotImplementedException();
     }
 }

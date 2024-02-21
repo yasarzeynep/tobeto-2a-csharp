@@ -43,7 +43,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Entities.Concrete.User">
-    <Position X="8" Y="4" Width="1.5" />
+    <Position X="7.25" Y="3.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAACAAAAAAAAAAAAgAAAAAAAACAAAAAAAAAAg=</HashCode>
       <FileName>Concrete\User.cs</FileName>
@@ -52,21 +52,21 @@
   <Class Name="Entities.Concrete.CorporateCustomer">
     <Position X="10.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABQAAAAAAAAEAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEBQAAAAAAAAEAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Concrete\CorporateCustomer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entities.Concrete.IndividualCustomer">
     <Position X="12.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAEAAAAAAAAAAAgAAAAgAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>AAEBAEAAAAAAAAAAAgAAAAgAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Concrete\IndividualCustomer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entities.Concrete.Customer">
     <Position X="15.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAgBAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAAAA=</HashCode>
       <FileName>Concrete\Customer.cs</FileName>
     </TypeIdentifier>
   </Class>

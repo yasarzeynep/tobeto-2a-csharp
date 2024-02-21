@@ -14,21 +14,21 @@ public class UserBusinessRules
         _userDal = userDal;
     }
 
-    public void CheckIfUserEmailExists(string email)
-    {
-        bool isEmailExists = _userDal.Get(u => u.Email == email) != null;
-        if (isEmailExists)
-        {
-            throw new BusinessException("User email already exists.");
-        }
-    }
+    //public void CheckIfUserEmailExists(string email)
+    //{
+    //    bool isEmailExists = _userDal.Get(u => u.Email == email) != null;
+    //    if (isEmailExists)
+    //    {
+    //        throw new BusinessException("User email already exists.");
+    //    }
+    //}
 
-    public void CheckIfUserExists(User? user)
-    {
-        if (user is null)
-        {
-            throw new NotFoundException("User not found.");
-        }
-    }
+    //public void CheckIfUserExists(User? user)
+    //{
+    //    if (user is null)
+    //    {
+    //        throw new NotFoundException("User not found.");
+    //    }
+    //}
 
 }

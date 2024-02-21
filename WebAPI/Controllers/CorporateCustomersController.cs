@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Business.Abstract;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
@@ -7,5 +8,10 @@ namespace WebAPI.Controllers
     [ApiController]
     public class CorporateCustomersController : ControllerBase
     {
+        private readonly ICorporateCustomerService _corporateCustomerService;
+        public CorporateCustomersController(ICorporateCustomerService corporateCustomerService)
+        {
+            _corporateCustomerService = corporateCustomerService;
+        }
     }
 }
