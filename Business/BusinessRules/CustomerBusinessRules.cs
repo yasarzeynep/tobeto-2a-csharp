@@ -21,12 +21,12 @@ public class CustomerBusinessRules
         }
     }
 
-    public void CheckIfCustomerNameExists(string name)
-    {
-        bool isNameExists = _customerDal.Get(c => c.Name == name) != null;
-        if (isNameExists)
-        {
-            throw new BusinessException("Customer name already exists.");
-        }
-    }
+    //public void CheckIfCustomerNameExists(string name)
+    //{
+    //    bool isNameExists = _customerDal.Get(c => c.Name == name) != null;
+    //    if (isNameExists)
+    //    {
+    //        throw new BusinessException("Customer name already exists.");
+    //    }
+    //}
 }

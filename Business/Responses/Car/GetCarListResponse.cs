@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Business.Responses.Car;
 
-public class GetListCarResponse
+public class GetCarListResponse
 {
     public ICollection<CarListItemDto> Items { get; set; }
 

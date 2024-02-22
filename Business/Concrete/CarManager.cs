@@ -64,13 +64,14 @@ public class CarManager : ICarService
         return response;
     }
 
-        public GetListCarResponse GetList(GetListCarRequest request)
-        {
+
+    public GetCarListResponse GetList(GetCarListRequest request)
+    {
         var cars = _carDal.GetList();
 
         // Mapping
         var response = _mapper.Map<List<CarListItemDto>>(cars);
-        return new GetListCarResponse { Items = response };
+        return new GetCarListResponse { Items = response };
     }
 
     public UpdateCarResponse Update(UpdateCarRequest request)

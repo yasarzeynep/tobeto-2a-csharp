@@ -19,7 +19,7 @@ public class CarMapperProfiles : Profile
 
         CreateMap<Car, CarListItemDto>();
 
-        CreateMap<IList<Car>, GetListCarResponse>()
+        CreateMap<IList<Car>, GetCarListResponse>()
             .ForMember(dest => dest.Items, opt => opt.MapFrom(src => src));
 
         CreateMap<UpdateCarRequest, Car>();

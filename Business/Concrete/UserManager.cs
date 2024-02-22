@@ -1,9 +1,7 @@
 ﻿using AutoMapper;
 using Business.Abstract;
 using Business.BusinessRules;
-using Business.Profiles.Validation.FluentValidation.User;
 using Business.Requests.User;
-using Business.Responses.User;
 using Core.CrossCuttingConcerns.Validation.FluentValidation;
 using DataAccess.Abstract;
 using Entities.Concrete;

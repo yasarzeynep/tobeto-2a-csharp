@@ -5,7 +5,7 @@ namespace Business.Abstract;
 
 public interface ICarService
 {
-    public GetListCarResponse GetList(GetListCarRequest request);
+    public GetCarListResponse GetList(GetCarListRequest request);
     public GetCarByIdResponse GetById(GetCarByIdRequest request);
     public AddCarResponse Add(AddCarRequest request);
     public UpdateCarResponse Update(UpdateCarRequest request);

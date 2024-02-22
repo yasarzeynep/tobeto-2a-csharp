@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Business.Requests.Car;
 
-public class GetListCarRequest
+public class GetCarListRequest
 {
     public short? FilterByYear { get; set; }
     public int? FilterByModelId { get; set; }

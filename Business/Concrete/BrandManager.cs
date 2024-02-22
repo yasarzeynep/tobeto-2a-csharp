@@ -40,6 +40,21 @@ public class BrandManager : IBrandService
         return response;
     }
 
+    public DeleteBrandResponse Delete(DeleteBrandRequest request)
+    {
+        throw new NotImplementedException();
+    }
+
+    public GetBrandByIdResponse GetById(GetBrandByIdRequest request)
+    {
+        throw new NotImplementedException();
+    }
+
+    public UpdateBrandResponse Update(UpdateBrandRequest request)
+    {
+        throw new NotImplementedException();
+    }
+
     GetBrandListResponse IBrandService.GetList(GetBrandListRequest request)
     {
         // İş Kuralları
