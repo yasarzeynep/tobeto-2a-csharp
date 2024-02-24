@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 namespace Core.DataAccess.EntityFramework
 {
     //T =>Type
+    //where kosulu  bir zorunluluga tabi  tutar TEntity'yi
     public class EfEntityRepositoryBase<TEntity, TEntityId, TContext> : IEntityRepository<TEntity, TEntityId>
-         where TEntity : Entity<TEntityId>, new() where TContext : DbContext
+         where TEntity : Entity<TEntityId>, new() //interface new lenemediği icin new() ekledik
+         where TContext : DbContext
     {
      
-        private readonly TContext Context;
+        private readonly TContext Context; 
+        // Core katmanı  diger katmanları  bağımlılık olarak almaz
+        //
 
         public EfEntityRepositoryBase(TContext context)
         {

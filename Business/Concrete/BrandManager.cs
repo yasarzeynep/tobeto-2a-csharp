@@ -45,6 +45,11 @@ public class BrandManager : IBrandService
         throw new NotImplementedException();
     }
 
+    public Brand? GetById(int id)
+    {
+        return _brandDal.Get(i => i.Id == id);
+    }
+
     public GetBrandByIdResponse GetById(GetBrandByIdRequest request)
     {
         throw new NotImplementedException();

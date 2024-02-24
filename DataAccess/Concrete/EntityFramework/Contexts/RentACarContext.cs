@@ -18,8 +18,20 @@ public class RentACarContext : DbContext
     public DbSet<IndividualCustomer> IndividualCustomers { get; set; }
     public DbSet<CorporateCustomer> CorporateCustomers { get; set; }
 
-
-
     public RentACarContext(DbContextOptions dbContextOptions)
         : base(dbContextOptions) { }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        // modelBuilder.Entity<Brand>().HasKey(i=> i.Id); // EF Core Naming Convention BrandId
+        modelBuilder.Entity<Brand>(e =>
+        {
+            e.HasKey(i => i.Id);
+            //e.Property(i => i.Premium).HasDefault(true);
+        }) ;
+
+        ////base.OnModelCreating(modelBuilder);// Normalde yaptığı işlemleri sürdürür.
+    }
 }
+// Update-Database migrationIsmi
+// Remove-Migration

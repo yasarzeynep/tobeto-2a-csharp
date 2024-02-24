@@ -24,8 +24,8 @@ public static class ServiceColletionBusinessExtension
     {
         services
             .AddSingleton<IBrandService, BrandManager>()
-            .AddSingleton<IBrandDal, InMemoryBrandDal>()
-            .AddSingleton<BrandBusinessRules>(); // Fluent
+            .AddScoped<IBrandDal, EfBrandDal>()
+            .AddScoped<BrandBusinessRules>(); // Fluent
         // Singleton: Tek bir nesne oluşturur ve herkese onu verir.
         // Ek ödev diğer yöntemleri araştırınız.
 
