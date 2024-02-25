@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using Business.BusinessRules;
 using Business.Concrete;
+using Core.Utilities.Security.JWT;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.EntityFramework.Contexts;
@@ -23,12 +24,13 @@ public static class ServiceColletionBusinessExtension
     public static IServiceCollection AddBusinessServices(this IServiceCollection services, IConfiguration configuration)
     {
         services
-            .AddSingleton<IBrandService, BrandManager>()
+            .AddScoped<IBrandService, BrandManager>()
             .AddScoped<IBrandDal, EfBrandDal>()
             .AddScoped<BrandBusinessRules>(); // Fluent
         // Singleton: Tek bir nesne oluşturur ve herkese onu verir.
         // Ek ödev diğer yöntemleri araştırınız.
 
+        services.AddScoped<ITokenHelper, JwtTokenHelper>();
         services
             .AddScoped<IModelService, ModelManager>()
             .AddScoped<IModelDal, EfModelDal>()

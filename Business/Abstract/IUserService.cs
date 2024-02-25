@@ -6,5 +6,9 @@ namespace Business.Abstract;
 
 public interface IUserService
 {
-    
-}
+
+    void Register(RegisterRequest request); 
+    void Login(LoginRequest request); //TODO: return type: JWT
+        
+        
+ }

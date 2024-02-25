@@ -5,6 +5,7 @@ using Business.Responses.Brand;
 using DataAccess.Abstract;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -39,8 +40,11 @@ public class BrandsController : ControllerBase
 
     //[HttpPost("/add")] // POST http://localhost:5245/api/brands/add
     [HttpPost] // POST http://localhost:5245/api/brands
+    //[Authorize] // Controller içerisinde kullanılır.
     public ActionResult<AddBrandResponse> Add(AddBrandRequest request)
     {
+
+        // Log kodları
         try
         {
             AddBrandResponse response = _brandService.Add(request);
